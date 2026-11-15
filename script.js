@@ -91,7 +91,7 @@ function checkCards() {
 window.addEventListener('scroll', checkCards);
 checkCards();
 
-var statValues   = [6, 6, 30, 16];
+var statValues   = [7, 6, 30, 16];
 var statSuffixes = ['+', '', '%', '+'];
 var countersStarted = false;
 
