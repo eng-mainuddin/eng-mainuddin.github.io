@@ -91,7 +91,19 @@ function checkCards() {
 window.addEventListener('scroll', checkCards);
 checkCards();
 
-var statValues   = [7, 6, 30, 16];
+function yearsOfExperience() {
+    var start = new Date(2019, 7, 1);
+    var now = new Date();
+    var years = now.getFullYear() - start.getFullYear();
+    if (now < new Date(start.getFullYear() + years, 7, 1)) years--;
+    return years;
+}
+
+document.querySelectorAll('.years-exp').forEach(function (el) {
+    el.textContent = yearsOfExperience();
+});
+
+var statValues   = [yearsOfExperience(), 6, 30, 16];
 var statSuffixes = ['+', '', '%', '+'];
 var countersStarted = false;
 
